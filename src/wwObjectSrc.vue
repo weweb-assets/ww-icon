@@ -1,6 +1,8 @@
 <template>
-	<div>
-		PROUUUUUT
+	<div class="ww-icon">
+		<div class="ww-icon-container">
+			<div v-bind:class="[wwObject.content.data.icon]" aria-hidden="true"></div>
+		</div>
 	</div>
 </template>
  
@@ -36,12 +38,12 @@ export default {
 	mounted() {
 		this.init()
 
-		// wwLib.wwElementsStyle.applyAllStyles({
-		// 	wwObject: this.wwObject,
-		// 	lastWwObject: null,
-		// 	element: this.$el.querySelector('.ww-button'),
-		// 	noAnim: this.wwAttrs.wwNoAnim,
-		// });
+		wwLib.wwElementsStyle.applyAllStyles({
+			wwObject: this.wwObject,
+			lastWwObject: null,
+			element: this.$el,
+			noAnim: this.wwAttrs.wwNoAnim,
+		});
 	}
 };
 </script>
