@@ -1,48 +1,50 @@
 <template>
-	<div class="ww-icon">
-		<div v-bind:class="[wwObject.content.data.icon]" aria-hidden="true"></div>
-	</div>
+  <div class="ww-icon">
+    <div v-bind:class="[wwObject.content.data.icon]" aria-hidden="true"></div>
+  </div>
 </template>
  
 
 <script>
 export default {
-	name: "ww-icon",
-	props: {
-		wwObject: {
-			type: Object,
-			default: {}
-		},
-		wwAttrs: {
-			type: Object,
-			default: {}
-		}
-	},
-	data() {
-		return {
+  name: "ww-icon",
+  props: {
+    wwObject: {
+      type: Object,
+      default: {}
+    },
+    wwAttrs: {
+      type: Object,
+      default: {}
+    }
+  },
+  data() {
+    return {
 
-		}
-	},
-	computed: {
-	},
-	watch: {
-	},
-	beforeDestroy() { },
-	methods: {
-		init() {
+    }
+  },
+  computed: {
+  },
+  watch: {
+  },
+  beforeDestroy() { },
+  methods: {
+    init() {
 
-		}
-	},
-	mounted() {
-		this.init()
+    }
+  },
+  mounted() {
+    this.init()
 
-		wwLib.wwElementsStyle.applyAllStyles({
-			wwObject: this.wwObject,
-			lastWwObject: null,
-			element: this.$el,
-			noAnim: this.wwAttrs.wwNoAnim,
-		});
-	}
+    console.log(this.wwObject)
+
+    wwLib.wwElementsStyle.applyAllStyles({
+      wwObject: this.wwObject,
+      lastWwObject: null,
+      element: this.$el,
+      noAnim: this.wwAttrs.wwNoAnim,
+    });
+  }
 };
 </script>
 
@@ -61,6 +63,11 @@ export default {
 .ww-icon-container > div {
   align-self: center;
 }
+
+.ww-class-btn-bg-none {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
 .ww-class-icon-size-xxsmall {
   min-width: 15px;
   min-height: 15px;
