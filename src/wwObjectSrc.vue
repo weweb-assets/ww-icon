@@ -44,6 +44,8 @@ export default {
       element: this.$el,
       noAnim: this.wwAttrs.wwNoAnim,
     });
+
+    this.$emit('ww-loaded', this);
   }
 };
 </script>
