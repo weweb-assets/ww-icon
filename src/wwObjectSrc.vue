@@ -1,49 +1,49 @@
 <template>
-  <div class="ww-icon">
-    <div v-bind:class="[wwObject.content.data.icon]" aria-hidden="true"></div>
-  </div>
+    <div class="ww-icon">
+        <div v-bind:class="[wwObject.content.data.icon]" aria-hidden="true"></div>
+    </div>
 </template>
  
 
 <script>
 export default {
-  name: "ww-icon",
-  props: {
-    wwObject: Object,
-    wwAttrs: {
-      type: Object,
-      default: {}
+    name: "ww-icon",
+    props: {
+        wwObject: Object,
+        wwAttrs: {
+            type: Object,
+            default: {}
+        }
+    },
+    data() {
+        return {
+
+        }
+    },
+    computed: {
+    },
+    watch: {
+    },
+    beforeDestroy() { },
+    methods: {
+        init() {
+
+        }
+    },
+    mounted() {
+        this.init()
+
+        //console.log(this.wwObject)
+
+        wwLib.wwElementsStyle.applyAllStyles({
+            wwObject: this.wwObject,
+            lastWwObject: null,
+            element: this.$el,
+            noAnim: this.wwAttrs.wwNoAnim,
+        });
+
+        this.$emit('ww-loaded', this);
     }
-  },
-  data() {
-    return {
-
-    }
-  },
-  computed: {
-  },
-  watch: {
-  },
-  beforeDestroy() { },
-  methods: {
-    init() {
-
-    }
-  },
-  mounted() {
-    this.init()
-
-    console.log(this.wwObject)
-
-    wwLib.wwElementsStyle.applyAllStyles({
-      wwObject: this.wwObject,
-      lastWwObject: null,
-      element: this.$el,
-      noAnim: this.wwAttrs.wwNoAnim,
-    });
-
-    this.$emit('ww-loaded', this);
-  }
 };
 </script>
 
