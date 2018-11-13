@@ -9,7 +9,7 @@
 export default {
     name: "ww-icon",
     props: {
-        wwObject: Object,
+        wwObjectCtrl: Object,
         wwAttrs: {
             type: Object,
             default: {}
@@ -17,7 +17,7 @@ export default {
     },
     data() {
         return {
-
+            wwObject: this.wwObjectCtrl.get(),
         }
     },
     computed: {

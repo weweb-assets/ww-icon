@@ -1,4 +1,4 @@
-import wwObject from './wwObjectSrc.vue'
+import wwObject from './wwObjectIcon.vue'
 
 const name = "ww-icon";
 const wwEnableMetrics = true;
