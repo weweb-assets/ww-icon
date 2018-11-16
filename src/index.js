@@ -6,9 +6,8 @@ const wwEnableMetrics = true;
 const addComponent = function () {
     if (window.vm) {
 
-        wwLib.wwObject.registerContentType(
-            name,
-            {
+        wwLib.wwObject.register({
+            content: {
                 type: name,
                 data: {
                     icon: "fa fa-thumbs-o-up",
@@ -18,8 +17,12 @@ const addComponent = function () {
                     classes: ["ww-class-img-format-round", "ww-class-font-size-medium", "ww-class-icon-size-xbig"]
                 }
             },
-            wwEnableMetrics
-        );
+            enableMetrics: wwEnableMetrics,
+            /* wwManager:start */
+            cmsOptions: {
+            }
+            /* wwManager:end */
+        });
 
         window.vm.addComponent(name, wwObject);
 
