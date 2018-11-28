@@ -1,7 +1,6 @@
 import wwObject from './wwObjectIcon.vue'
 
 const name = "ww-icon";
-const wwEnableMetrics = true;
 
 const addComponent = function () {
     if (window.vm) {
@@ -17,7 +16,11 @@ const addComponent = function () {
                     classes: ["ww-class-img-format-round", "ww-class-font-size-medium", "ww-class-icon-size-xbig"]
                 }
             },
-            enableMetrics: wwEnableMetrics,
+            upsales: {
+                wwAnalytics: {
+                    click: true
+                }
+            },
             /* wwManager:start */
             cmsOptions: {
             }
