@@ -10,10 +10,24 @@ const addComponent = function () {
                 type: name,
                 data: {
                     icon: "fa fa-thumbs-o-up",
-                    color: "#FFFFFF",
-                    backgroundColor: "#039BE5",
-                    borderColor: '',
-                    classes: ["ww-class-img-format-round", "ww-class-font-size-medium", "ww-class-icon-size-xbig"]
+                    style: {
+                        color: "#000000",
+                        backgroundColor: "#FFFFFF",
+                        gradient: '',
+                        borderRadius: 50,
+                        borderWidth: 2,
+                        borderColor: "#000000",
+                        borderStyle: "solid",
+                        boxShadow: {
+                            x: 0,
+                            y: 0,
+                            b: 0,
+                            s: 0,
+                            c: ''
+                        },
+                        size: 40,
+                        fontSize: 20
+                    },
                 }
             },
             upsales: {
@@ -23,6 +37,28 @@ const addComponent = function () {
             },
             /* wwManager:start */
             cmsOptions: {
+                wwObjectMenu: {
+                    items: [
+                        {
+                            name: 'OPTIONS',
+                            text: {
+                                en_GB: 'Options...',
+                                fr_FR: 'Options...'
+                            },
+                            icon: 'wwi wwi-edit-other',
+                            action: 'edit'
+                        },
+                        {
+                            name: 'ICON',
+                            text: {
+                                en_GB: 'Icon',
+                                fr_FR: 'Icône'
+                            },
+                            icon: 'wwi wwi-icon',
+                            action: 'changeIcon'
+                        }
+                    ]
+                }
             }
             /* wwManager:end */
         });
