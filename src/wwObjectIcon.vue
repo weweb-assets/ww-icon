@@ -47,7 +47,6 @@ export default {
             style.borderWidth = (wwObjectStyle.borderWidth || 1) + 'px';
             style.borderColor = wwObjectStyle.borderColor || '#000000';
             style.borderStyle = wwObjectStyle.borderStyle || 'solid';
-            style.boxShadow = wwObjectStyle.boxShadow || '#FFFFFF';
             style.width = (wwObjectStyle.size || 40) + 'px';
             style.height = (wwObjectStyle.size || 40) + 'px';
             style.fontSize = (wwObjectStyle.fontSize || 20) + 'px';

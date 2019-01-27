@@ -438,6 +438,8 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #efefef;
+            border: 2px solid #cacaca;
 
             @media (min-width: 992px) {
                 flex-basis: 50%;
