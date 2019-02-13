@@ -12,7 +12,7 @@ wwLib.wwPopups.addPopup('wwIconPopupStyle', wwIconPopupStyle);
 /* wwManager:end */
 
 export default {
-    name: "ww-icon",
+    name: "__COMPONENT_NAME__",
     props: {
         wwObjectCtrl: Object,
         wwAttrs: {
