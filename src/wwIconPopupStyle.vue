@@ -101,36 +101,36 @@ export default {
                         value: 'none',
                         default: true,
                         text: {
-                            en_GB: 'None',
-                            fr_FR: 'Aucune'
+                            en: 'None',
+                            fr: 'Aucune'
                         }
                     },
                     {
                         value: 'solid',
                         text: {
-                            en_GB: 'Solid',
-                            fr_FR: 'Continue'
+                            en: 'Solid',
+                            fr: 'Continue'
                         }
                     },
                     {
                         value: 'dotted',
                         text: {
-                            en_GB: 'Dotted',
-                            fr_FR: 'Pointillés'
+                            en: 'Dotted',
+                            fr: 'Pointillés'
                         }
                     },
                     {
                         value: 'dashed',
                         text: {
-                            en_GB: 'Dashed',
-                            fr_FR: 'Tirets'
+                            en: 'Dashed',
+                            fr: 'Tirets'
                         }
                     },
                     {
                         value: 'double',
                         text: {
-                            en_GB: 'Double',
-                            fr_FR: 'Double'
+                            en: 'Double',
+                            fr: 'Double'
                         }
                     },
                 ]
@@ -151,8 +151,8 @@ export default {
                         },
                         default: true,
                         text: {
-                            en_GB: 'None',
-                            fr_FR: 'Aucune'
+                            en: 'None',
+                            fr: 'Aucune'
                         }
 
                     },
@@ -176,8 +176,8 @@ export default {
                             }
                         },
                         text: {
-                            en_GB: 'Small',
-                            fr_FR: 'Légère'
+                            en: 'Small',
+                            fr: 'Légère'
                         }
                     },
                     {
@@ -200,8 +200,8 @@ export default {
                             }
                         },
                         text: {
-                            en_GB: 'Medium',
-                            fr_FR: 'Moyenne'
+                            en: 'Medium',
+                            fr: 'Moyenne'
                         }
                     },
                     {
@@ -224,8 +224,8 @@ export default {
                             }
                         },
                         text: {
-                            en_GB: 'Big',
-                            fr_FR: 'Grande'
+                            en: 'Big',
+                            fr: 'Grande'
                         }
                     },
                     {
@@ -248,8 +248,8 @@ export default {
                             }
                         },
                         text: {
-                            en_GB: 'Small under',
-                            fr_FR: 'Petite en dessous'
+                            en: 'Small under',
+                            fr: 'Petite en dessous'
                         }
                     },
                     {
@@ -272,8 +272,8 @@ export default {
                             }
                         },
                         text: {
-                            en_GB: 'Medium under',
-                            fr_FR: 'Moyenne en dessous'
+                            en: 'Medium under',
+                            fr: 'Moyenne en dessous'
                         }
                     },
                     {
@@ -296,8 +296,8 @@ export default {
                             }
                         },
                         text: {
-                            en_GB: 'Big under',
-                            fr_FR: 'Grande en dessous'
+                            en: 'Big under',
+                            fr: 'Grande en dessous'
                         }
                     },
                 ]

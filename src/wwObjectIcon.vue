@@ -81,8 +81,8 @@ export default {
 
             wwLib.wwPopups.addStory('WWICON_SELECT', {
                 title: {
-                    en_GB: 'Select icon',
-                    fr_FR: 'Choisir une icon'
+                    en: 'Select icon',
+                    fr: 'Choisir une icon'
                 },
                 type: 'wwPopupIcons'
             },
@@ -110,8 +110,8 @@ export default {
 
             wwLib.wwPopups.addStory('WWICON_EDIT', {
                 title: {
-                    en_GB: 'Edit icon',
-                    fr_FR: 'Editer l\'icon'
+                    en: 'Edit icon',
+                    fr: 'Editer l\'icon'
                 },
                 type: 'wwPopupEditWwObject',
                 buttons: null,
@@ -119,16 +119,16 @@ export default {
                     list: {
                         EDIT_SELECT: {
                             separator: {
-                                en_GB: 'Icon',
-                                fr_FR: 'Icône'
+                                en: 'Icon',
+                                fr: 'Icône'
                             },
                             title: {
-                                en_GB: 'Select icon',
-                                fr_FR: 'Sélectionner une icône'
+                                en: 'Select icon',
+                                fr: 'Sélectionner une icône'
                             },
                             desc: {
-                                en_GB: '',
-                                fr_FR: ''
+                                en: '',
+                                fr: ''
                             },
                             icon: 'wwi wwi-icon',
                             shortcut: 'i',
@@ -136,47 +136,82 @@ export default {
                         },
                         EDIT_STYLE: {
                             separator: {
-                                en_GB: 'Style',
-                                fr_FR: 'Style'
+                                en: 'Style',
+                                fr: 'Style'
                             },
                             title: {
-                                en_GB: 'Change icon style',
-                                fr_FR: 'Changer l\'apparence de l\'icon'
+                                en: 'Change icon style',
+                                fr: 'Changer l\'apparence de l\'icon'
                             },
                             desc: {
-                                en_GB: 'Borders, colors, shadow, ...',
-                                fr_FR: 'Bordures, couleurs, ombres, ...'
+                                en: 'Borders, colors, shadow, ...',
+                                fr: 'Bordures, couleurs, ombres, ...'
                             },
                             icon: 'wwi wwi-edit-style',
                             shortcut: 's',
                             next: 'WWICON_STYLE'
+                        },
+                        EDIT_ICON_LINK: {
+                            separator: {
+                                en: 'Link',
+                                fr: 'Lien'
+                            },
+                            title: {
+                                en: 'Change icon link',
+                                fr: 'Changer le lien de l\'icône'
+                            },
+                            desc: {
+                                en: 'External, internal, ...',
+                                fr: 'Externe, interne, ...'
+                            },
+                            icon: 'wwi wwi-link-external',
+                            shortcut: 's',
+                            next: 'WWICON_LINKS'
                         }
                     }
                 }
             })
             wwLib.wwPopups.addStory('WWICON_SELECT', {
                 title: {
-                    en_GB: 'Select icon',
-                    fr_FR: 'Choisir une icon'
+                    en: 'Select icon',
+                    fr: 'Choisir une icon'
                 },
                 type: 'wwPopupIcons',
                 next: 'WWICON_STYLE'
-            },
-            )
+            })
             wwLib.wwPopups.addStory('WWICON_STYLE', {
                 title: {
-                    en_GB: 'Icon style',
-                    fr_FR: 'Style de l\'icône'
+                    en: 'Icon style',
+                    fr: 'Style de l\'icône'
                 },
                 type: 'wwIconPopupStyle',
                 buttons: {
                     OK: {
                         text: {
-                            en_GB: 'Ok',
-                            fr_FR: 'Valider'
+                            en: 'Ok',
+                            fr: 'Valider'
                         },
                         next: false
                     }
+                }
+            })
+            wwLib.wwPopups.addStory('WWICON_LINKS', {
+                title: {
+                    en: 'Link',
+                    fr: 'Lien'
+                },
+                type: 'wwPopupLinks',
+                storyData: {
+                    links: [
+                        'EXTERNAL',
+                        'INTERNAL',
+                        'SECTION',
+                        'POPUP',
+                        'DOWNLOAD',
+                        'TOGGLE_NAVBAR',
+                        'CLOSE_POPUP',
+                        'NO_LINK'
+                    ]
                 }
             })
 
