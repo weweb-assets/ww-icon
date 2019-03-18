@@ -43,8 +43,8 @@ export default {
                 style.backgroundColor = wwObjectStyle.backgroundColor || '#FFFFFF';
             }
 
-            style.borderRadius = (wwObjectStyle.borderRadius || 50) + '%';
-            style.borderWidth = (wwObjectStyle.borderWidth || 1) + 'px';
+            style.borderRadius = (wwObjectStyle.borderRadius || 0) + '%';
+            style.borderWidth = (wwObjectStyle.borderWidth || 0) + 'px';
             style.borderColor = wwObjectStyle.borderColor || '#000000';
             style.borderStyle = wwObjectStyle.borderStyle || 'solid';
             style.width = (wwObjectStyle.size || 40) + 'px';

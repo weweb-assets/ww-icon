@@ -10,33 +10,34 @@
                 <div class="title">Fond</div>
                 <div class="option">
                     <div class="option-row">
+                        <div class="desc">Cacher le fond ?</div>
+                        <wwManagerRadio v-model="hideBg"></wwManagerRadio>
+                    </div>
+                    <div class="option-row" v-if="!hideBg">
+                        <wwManagerColorSelect v-show="!gradientBg" :value="props.backgroundColor" @change="setValue('backgroundColor', $event)"></wwManagerColorSelect>
+                        <wwManagerGradientSelect v-show="gradientBg" :value="props.gradient" @change="setValue('gradient', $event)"></wwManagerGradientSelect>
+
                         <wwManagerSlider class="slider" :options="sizeOptions" :value="props.size" @change="setValue('size', $event)"></wwManagerSlider>
                         <div class="value">{{props.size}}px</div>
                     </div>
-                    <div class="option-row">
+                    <div class="option-row" v-if="!hideBg">
                         <div class="desc">Utiliser un dégradé ?</div>
                         <wwManagerRadio v-model="gradientBg"></wwManagerRadio>
-                    </div>
-                    <div class="option-row">
-                        <wwManagerColorSelect v-show="!gradientBg" :value="props.backgroundColor" @change="setValue('backgroundColor', $event)"></wwManagerColorSelect>
-                        <wwManagerGradientSelect v-show="gradientBg" :value="props.gradient" @change="setValue('gradient', $event)"></wwManagerGradientSelect>
                     </div>
                 </div>
                 <div class="title">icône</div>
                 <div class="option">
                     <div class="option-row">
+                        <wwManagerColorSelect :value="props.color" @change="setValue('color', $event)"></wwManagerColorSelect>
                         <wwManagerSlider class="slider" :options="fontSizeOptions" :value="props.fontSize" @change="setValue('fontSize', $event)"></wwManagerSlider>
                         <div class="value">{{props.fontSize}}px</div>
-                    </div>
-                    <div class="option-row">
-                        <wwManagerColorSelect :value="props.color" @change="setValue('color', $event)"></wwManagerColorSelect>
                     </div>
                 </div>
                 <div class="title">Arrondis</div>
                 <div class="option">
                     <div class="option-row">
-                        <wwManagerSlider class="slider" :options="borderRadiusOptions" :value="props.borderRadius" @change="setValue('borderRadius', $event)"></wwManagerSlider>
-                        <div class="value">{{props.borderRadius}} %</div>
+                        <wwManagerSlider class="slider" :options="borderRadiusOptions" :value="props.borderRadius * 2" @change="setValue('borderRadius', $event)"></wwManagerSlider>
+                        <div class="value">{{props.borderRadius * 2}} %</div>
                     </div>
                 </div>
                 <div class="title">BORDURE</div>
@@ -46,8 +47,9 @@
                         <div class="value">{{props.borderWidth}}px</div>
                     </div>
                     <div class="option-row">
-                        <wwManagerSelect class="border-style" :options="borderStyleOptions" :value="props.borderStyle" @change="setValue('borderStyle', $event)"></wwManagerSelect>
                         <wwManagerColorSelect class="border-color" :value="props.borderColor" @change="setValue('borderColor', $event)"></wwManagerColorSelect>
+
+                        <wwManagerSelect class="border-style" :options="borderStyleOptions" :value="props.borderStyle" @change="setValue('borderStyle', $event)"></wwManagerSelect>
                     </div>
                 </div>
                 <div class="title">OMBRE</div>
@@ -74,6 +76,7 @@ export default {
             imageWidth: 500,
             containerHeight: null,
             gradientBg: false,
+            hideBg: false,
             sizeOptions: {
                 min: 10,
                 max: 250,
@@ -86,7 +89,7 @@ export default {
             },
             borderRadiusOptions: {
                 min: 0,
-                max: 50,
+                max: 100,
                 digits: 0
             },
             borderWidthOptions: {
@@ -339,6 +342,17 @@ export default {
             else {
                 this.setValue('gradient', {});
             }
+        },
+        hideBg() {
+            if (this.hideBg) {
+                this.props.size = this.options.data.wwObject.content.data.style.fontSize;
+                this.options.data.wwObject.content.data.style.size = this.options.data.wwObject.content.data.style.fontSize;
+
+                this.props.backgroundColor = '#FFFFFF00';
+                this.options.data.wwObject.content.data.style.backgroundColor = '#FFFFFF00';
+
+                this.updateWwObject();
+            }
         }
     },
     methods: {
@@ -348,6 +362,8 @@ export default {
         setResult() {
             for (const key in this.props) {
                 this.options.result[key] = this.props[key];
+
+
             }
         },
 
@@ -377,6 +393,11 @@ export default {
                 }
             }
 
+            if (prop == 'borderRadius') {
+                this.props[prop] = value / 2;
+                this.options.data.wwObject.content.data.style[prop] = value / 2;
+            }
+
             if (prop == 'borderStyle') {
                 if (value == 'none') {
                     this.props.borderWidth = 0;
@@ -391,6 +412,17 @@ export default {
             if (prop == 'borderColor') {
                 this.props.borderWidth = this.options.data.wwObject.content.data.style.borderWidth || 1;
                 this.options.data.wwObject.content.data.style.borderWidth = this.props.borderWidth;
+            }
+
+            if (prop == 'fontSize') {
+                this.sizeOptions.min = value;
+                this.props.size = Math.max(value, this.props.size);
+                this.options.data.wwObject.content.data.style.size = this.props.size;
+
+                if (this.hideBg) {
+                    this.props.size = value;
+                    this.options.data.wwObject.content.data.style.size = this.props.size;
+                }
             }
 
             this.updateWwObject();
@@ -409,10 +441,13 @@ export default {
 
         this.options.data.wwObject.content.data.style = this.options.data.wwObject.content.data.style || {};
 
-
         for (let key in this.props) {
             this.props[key] = this.options.data.wwObject.content.data.style[key] || this.props[key];
         }
+
+        this.sizeOptions.min = this.options.data.wwObject.content.data.style.fontSize || 0
+
+        this.hideBg = this.options.data.wwObject.content.data.style.fontSize == this.options.data.wwObject.content.data.style.size && this.options.data.wwObject.content.data.style.backgroundColor == '#FFFFFF00';
     },
     beforeDestroy() {
 
@@ -521,7 +556,7 @@ export default {
                     }
 
                     .border-color {
-                        margin: 0 0 0 15px;
+                        margin: 0 15px 0 0;
                     }
                 }
             }
