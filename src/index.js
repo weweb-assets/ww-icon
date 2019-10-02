@@ -10,7 +10,7 @@ const addComponent = function () {
             content: {
                 type: name,
                 data: {
-                    icon: "fa fa-thumbs-o-up",
+                    icon: "wwi wwi-icon",
                     style: {
                         color: "#000000",
                         backgroundColor: "#FFFFFF",
