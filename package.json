@@ -10,15 +10,14 @@
     "private": true,
     "scripts": {
         "build": "weweb-build",
-        "serve-manager": "weweb-serve-manager",
-        "serve-front": "weweb-serve-front",
-        "upload": "weweb-upload"
+        "serve": "weweb-serve",
+        "create-config": "weweb-config"
     },
     "dependencies": {
-        "vue": "^2.6.10"
+        "vue": "^2.6.11"
     },
     "devDependencies": {
-        "weweb-client": "^1.0.47"
+        "weweb-client": "^1.1.1"
     },
     "browserslist": [
         "> 1%",
