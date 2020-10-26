@@ -1,8 +1,8 @@
 import './stories';
 
-export default async function openPopup({ fontSize, color, icon, uid }) {
+export default async function openPopup() {
     try {
-        return await wwLib.wwPopups.open({ firstPage: 'WWICON_STYLE', data: { fontSize, color, icon, uid } });
+        return await wwLib.wwPopups.open({ firstPage: 'WWICON_SELECT' });
     } catch (err) {
         return null;
     }
