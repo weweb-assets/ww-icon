@@ -1,36 +1,32 @@
 <template>
-    <wwIcon :content="content"></wwIcon>
+    <div class="ww-icon" :class="[content.icon]" aria-hidden="true" :style="style"></div>
 </template>
 
 <script>
-/* wwManager:start */
-import openPopup from './popups';
-/* wwManager:end */
-import wwIcon from './wwIcon.vue';
-
 export default {
     props: {
         content: Object,
     },
-    components: { wwIcon },
     wwDefaultContent: {
         fontSize: 20,
         color: '#000000',
         icon: 'wwi wwi-icon',
     },
-    methods: {
-        /* wwManager:start */
-        async edit() {
-            try {
-                const update = await openPopup(this.content);
-                if (update) {
-                    this.$emit('update', update);
-                }
-            } catch (error) {
-                wwLib.wwLog.error(error);
-            }
+    computed: {
+        style() {
+            return {
+                color: this.content.color,
+                fontSize: `${this.content.fontSize}px`,
+            };
         },
-        /* wwManager:end */
     },
 };
 </script>
+
+<style scoped lang="scss">
+.ww-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
