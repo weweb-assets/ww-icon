@@ -5,9 +5,6 @@
             "en": "Icon",
             "fr": "Icône"
         },
-        "editElementMenu": {
-            "items": [{ "label": { "en": "Options", "fr": "Options" }, "action": "edit" }]
-        },
         "styleOptions": {
             "color": { "type": "Color", "label": { "en": "Color", "fr": "Couleur" } },
             "fontSize": { "type": "Number", "label": { "en": "Size", "fr": "Taille" } }
