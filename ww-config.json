@@ -5,6 +5,20 @@
             "en": "Icon",
             "fr": "Icône"
         },
+        "menuOptions": {
+            "items": [
+                {
+                    "name": "Settings",
+                    "quick": [{ "type": "custom-style", "name": "fontSize" }],
+                    "icon": "config"
+                },
+                {
+                    "name": "Color",
+                    "quick": [{ "type": "custom-style", "name": "color" }, { "type": "Background" }],
+                    "icon": "color-fill"
+                }
+            ]
+        },
         "styleOptions": {
             "color": { "type": "Color", "label": { "en": "Color", "fr": "Couleur" } },
             "fontSize": { "type": "Number", "label": { "en": "Size", "fr": "Taille" } }
