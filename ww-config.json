@@ -20,7 +20,7 @@
             ]
         },
         "styleOptions": {
-            "color": { "type": "Color", "label": { "en": "Icon Color", "fr": "Couleur" } },
+            "color": { "type": "Color", "label": { "en": "Icon Color", "fr": "Couleur", "bindable": true } },
             "fontSize": { "type": "Number", "label": { "en": "Size", "fr": "Taille" } }
         },
         "settingsOptions": {
