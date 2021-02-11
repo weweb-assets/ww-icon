@@ -1,5 +1,7 @@
 <template>
-    <div class="ww-icon" :class="[content.icon]" aria-hidden="true" :style="style"></div>
+    <div class="ww-icon" :style="style">
+        <div :class="[content.icon]" aria-hidden="true"></div>
+    </div>
 </template>
 
 <script>
