@@ -10,8 +10,8 @@ export default {
         content: Object,
     },
     wwDefaultContent: {
-        fontSize: 20,
-        color: '#000000',
+        fontSize: wwLib.allowState(wwLib.responsive(20)),
+        color: wwLib.allowState(wwLib.responsive('#000000')),
         icon: 'wwi wwi-icon',
     },
     computed: {
