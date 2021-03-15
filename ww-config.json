@@ -6,18 +6,9 @@
             "fr": "Icône"
         },
         "menuOptions": {
-            "items": [
-                {
-                    "name": "Settings",
-                    "quick": [{ "type": "custom-style", "name": "fontSize" }],
-                    "icon": "config"
-                },
-                {
-                    "name": "Color",
-                    "quick": [{ "type": "custom-style", "name": "color" }, { "type": "Background" }],
-                    "icon": "color-fill"
-                }
-            ]
+            "quick": {
+                "sections": ["icon", "ww-link", "color", "ww-background"]
+            }
         },
         "styleOptions": {
             "color": { "type": "Color", "label": { "en": "Color", "fr": "Couleur" } },
