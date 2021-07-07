@@ -7,7 +7,7 @@
 <script>
 export default {
     props: {
-        content: Object,
+        content: { type: Object, required: true },
     },
     wwDefaultContent: {
         fontSize: wwLib.allowState(wwLib.responsive(20)),
