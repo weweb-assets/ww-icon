@@ -1,57 +1,30 @@
 {
-    "componentPath": "./src/wwObjectIcon.vue",
-    "content": {
-        "type": "ww-icon",
-        "data": {
-            "icon": "wwi wwi-icon",
-            "style": {
-                "color": "#000000",
-                "backgroundColor": "#FFFFFF",
-                "gradient": "",
-                "borderRadius": 50,
-                "borderWidth": 2,
-                "borderColor": "#000000",
-                "borderStyle": "solid",
-                "boxShadow": {
-                    "x": 0,
-                    "y": 0,
-                    "b": 0,
-                    "s": 0,
-                    "c": ""
-                },
-                "size": 40,
-                "fontSize": 20
-            }
-        }
-    },
-    "upsales": {
-        "wwAnalytics": {
-            "click": true
-        }
-    },
-    "cmsOptions": {
-        "wwObjectMenu": {
+    "componentPath": "./src/wwObject.vue",
+    "editor": {
+        "label": {
+            "en": "Icon",
+            "fr": "Icône"
+        },
+        "menuOptions": {
             "items": [
                 {
-                    "name": "OPTIONS",
-                    "main": true,
-                    "text": {
-                        "en": "Options",
-                        "fr": "Options"
-                    },
-                    "icon": "wwi wwi-edit-other",
-                    "action": "edit"
+                    "name": "Settings",
+                    "quick": [{ "type": "custom-style", "name": "fontSize" }],
+                    "icon": "config"
                 },
                 {
-                    "name": "ICON",
-                    "text": {
-                        "en": "Icon",
-                        "fr": "Icône"
-                    },
-                    "icon": "wwi wwi-icon",
-                    "action": "changeIcon"
+                    "name": "Color",
+                    "quick": [{ "type": "custom-style", "name": "color" }, { "type": "Background" }],
+                    "icon": "color-fill"
                 }
             ]
+        },
+        "styleOptions": {
+            "color": { "type": "Color", "bindable": true, "label": { "en": "Icon Color", "fr": "Couleur" } },
+            "fontSize": { "type": "Number", "label": { "en": "Size", "fr": "Taille" } }
+        },
+        "settingsOptions": {
+            "icon": { "type": "Icon", "label": { "en": "Icon", "fr": "Icône" } }
         }
     }
 }
