@@ -1,7 +1,8 @@
 {
     "componentPath": "./src/wwElement.vue",
     "options": {
-        "lazyHydrate": true
+        "lazyHydrate": true,
+        "hyperlink": true
     },
     "editor": {
         "label": {
