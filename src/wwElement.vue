@@ -9,11 +9,6 @@ export default {
     props: {
         content: { type: Object, required: true },
     },
-    wwDefaultContent: {
-        fontSize: wwLib.allowState(wwLib.responsive(20)),
-        color: wwLib.allowState(wwLib.responsive('#000000')),
-        icon: 'wwi wwi-icon',
-    },
     computed: {
         style() {
             return {
