@@ -10,13 +10,6 @@ export default {
                 sections: ['icon', 'ww-link', 'color', 'ww-background'],
             },
         },
-        styleOptions: {
-            color: { type: 'Color', label: { en: 'Color', fr: 'Couleur' } },
-            fontSize: { type: 'Number', label: { en: 'Size', fr: 'Taille' } },
-        },
-        settingsOptions: {
-            icon: { type: 'Icon', label: { en: 'Icon', fr: 'Icône' } },
-        },
     },
     options: {
         hyperlink: true,
