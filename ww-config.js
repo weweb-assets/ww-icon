@@ -5,11 +5,6 @@ export default {
             fr: 'Icône',
         },
         icon: 'start-active',
-        menuOptions: {
-            quick: {
-                sections: ['icon', 'ww-link', 'color', 'ww-background'],
-            },
-        },
     },
     options: {
         hyperlink: true,
