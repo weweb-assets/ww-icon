@@ -4,7 +4,7 @@ export default {
             en: 'Icon',
             fr: 'Icône',
         },
-        icon: 'start-active',
+        icon: 'star',
     },
     options: {
         hyperlink: true,
