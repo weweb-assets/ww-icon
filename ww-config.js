@@ -16,7 +16,7 @@ export default {
             bindable: true,
             responsive: true,
             states: true,
-            defaultValue: 20,
+            classes: true,
             /* wwEditor:start */
             bindingValidation: {
                 type: 'number',
@@ -30,7 +30,7 @@ export default {
             bindable: true,
             responsive: true,
             states: true,
-            defaultValue: '#000000',
+            classes: true,
             /* wwEditor:start */
             bindingValidation: {
                 cssSupports: 'color',
