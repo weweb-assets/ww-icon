@@ -22,7 +22,6 @@ export default {
 
 <style scoped lang="scss">
 .ww-icon {
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: inherit;
