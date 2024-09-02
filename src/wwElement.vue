@@ -1,13 +1,17 @@
 <template>
-    <div class="ww-icon" :style="style">
+    <component :is="tag" v-bind="properties" class="ww-icon" :style="style">
         <div :class="[content.icon]" aria-hidden="true"></div>
-    </div>
+    </component>
 </template>
 
 <script>
 export default {
     props: {
         content: { type: Object, required: true },
+    },
+    setup() {
+        const { hasLink, properties, tag } = wwLib.wwElement.useLink();
+        return { hasLink, properties, tag };
     },
     computed: {
         style() {

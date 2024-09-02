@@ -8,6 +8,7 @@ export default {
     },
     options: {
         displayAllowedValues: ['flex', 'inline-flex'],
+        linkable: true,
     },
     properties: {
         fontSize: {
