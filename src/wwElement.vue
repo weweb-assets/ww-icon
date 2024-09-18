@@ -1,5 +1,5 @@
 <template>
-    <component :is="tag" v-bind="properties" class="ww-icon" :style="style">
+    <component :is="tag" v-bind="properties" class="ww-icon" :style="style" :class="{ '-link': hasLink }">
         <div :class="[content.icon]" aria-hidden="true"></div>
     </component>
 </template>
@@ -28,6 +28,8 @@ export default {
 .ww-icon {
     justify-content: center;
     align-items: center;
-    transition: inherit;
+    &.-link {
+        cursor: pointer;
+    }
 }
 </style>
