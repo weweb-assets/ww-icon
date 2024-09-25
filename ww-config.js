@@ -6,6 +6,10 @@ export default {
         },
         icon: 'star',
     },
+    options: {
+        displayAllowedValues: ['flex', 'inline-flex'],
+        linkable: true,
+    },
     properties: {
         fontSize: {
             label: { en: 'Size', fr: 'Taille' },
