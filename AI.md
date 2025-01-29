@@ -17,6 +17,7 @@ keywords:
 #### ww-icon
 
 Component Purpose: Renders an icon element with customizable size, color, and icon type. Can be linked to URL or action.
+When put inside a ww-button, do not forget to ad the proper margin to the left or right.
 
 Properties:
 - fontSize: number - Size of icon in pixels
