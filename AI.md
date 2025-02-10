@@ -30,6 +30,7 @@ Features:
 - Linkable for URL redirection or action triggers
 - Responsive fontSize and color values with states support
 - Icon property supports state bindings
+- When the icon is the child of a button, do not forget to add the proper margin
 
 Events: none
 
