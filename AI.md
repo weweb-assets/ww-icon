@@ -35,3 +35,8 @@ Features:
 Events: none
 
 Variables: none
+
+<example>
+  Icon with different size, color and backgroundColor on hover:
+  {"uid":"hover_icon","tag":"ww-icon","name":"Hover Icon","props":{"default":{"color":"red","size":"12px", ...},"_wwHover_default":{"color":"blue","size":"16px"},"mobile":{"size":"8px"},"_wwHover_mobile":{"color":"blue","size":"10px"}},"styles":{"default":{"bacgroundColor":"yellow", ...},"_wwHover_default":{"bacgroundColor":"green"}}}
+</example>
