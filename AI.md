@@ -20,9 +20,9 @@ Component Purpose: Renders an icon element with customizable size, color, and ic
 When put inside a ww-button, do not forget to ad the proper margin to the left or right.
 
 Properties:
-- fontSize: number - Size of icon in pixels
-- color: string - Color of icon (name, hex, RGB/RGBA)
-- icon: string - Icon code/class name. Default: "wwi wwi-icon"
+- fontSize: number - Size of icon in pixels. (Mandatory)
+- color: string - Color of icon (name, hex, RGB/RGBA). (Mandatory)
+- icon: string - Icon code/class name. Default: "wwi wwi-icon" (Mandatory)
 
 Children: none
 
