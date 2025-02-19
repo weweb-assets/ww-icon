@@ -1,9 +1,9 @@
 <template>
-    <div v-html="iconHTML"></div>
+    <div v-html="iconHTML" :style="style" class="ww-icon"></div>
 </template>
 
 <script>
-import icons from './icons.js';
+import icons, { placeholderIcon } from './icons.js';
 
 export default {
     props: {
@@ -14,8 +14,19 @@ export default {
     },
     computed: {
         iconHTML() {
-            return icons[this.content.icon]?.svg;
+            return icons[this.content.icon] || placeholderIcon;
+        },
+        style() {
+            return {
+                '--icon-color': this.content.color,
+            };
         },
     },
 };
 </script>
+
+<style scoped>
+.ww-icon {
+    color: var(--icon-color, unset);
+}
+</style>

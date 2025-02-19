@@ -22,5 +22,21 @@ export default {
             },
             /* wwEditor:end */
         },
+        color: {
+            label: { en: 'Color', fr: 'Couleur' },
+            type: 'Color',
+            bindable: true,
+            states: true,
+            classes: true,
+            options: {
+                nullable: true,
+            },
+            /* wwEditor:start */
+            bindingValidation: {
+                type: 'string',
+                tooltip: 'The color of the icon',
+            },
+            /* wwEditor:end */
+        },
     },
 };
