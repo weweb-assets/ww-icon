@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import icons, { placeholderIcon } from './icons.js';
+const placeholderIcon =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>';
 
 export default {
     props: {
@@ -12,9 +13,15 @@ export default {
         wwEditorState: { type: Object, required: true },
         /* wwEditor:end */
     },
+    setup() {
+        const { getIcon } = wwLib.useIcons();
+        return {
+            getIcon,
+        };
+    },
     computed: {
         iconHTML() {
-            return icons[this.content.icon] || placeholderIcon;
+            return this.getIcon(this.content.icon) || placeholderIcon;
         },
         style() {
             return {
@@ -25,7 +32,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .ww-icon {
     color: var(--icon-color, unset);
 }
