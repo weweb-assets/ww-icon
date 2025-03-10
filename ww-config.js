@@ -18,7 +18,7 @@ export default {
             /* wwEditor:start */
             bindingValidation: {
                 type: 'string',
-                tooltip: 'A string that defines the icon code`',
+                tooltip: 'A string that defines the icon code',
             },
             /* wwEditor:end */
         },
