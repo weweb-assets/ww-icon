@@ -41,5 +41,9 @@ export default {
 <style scoped lang="scss">
 .ww-icon {
     color: var(--icon-color, unset);
+    > :deep(svg) {
+        width: 100%;
+        height: 100%;
+    }
 }
 </style>
