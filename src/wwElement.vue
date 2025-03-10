@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { ref, watchEffect } from 'vue';
 const placeholderIcon =
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>';
 
@@ -13,15 +14,20 @@ export default {
         wwEditorState: { type: Object, required: true },
         /* wwEditor:end */
     },
-    setup() {
+    setup(props) {
         const { getIcon } = wwLib.useIcons();
+        const iconText = ref(null);
+        watchEffect(async () => {
+            iconText.value = await getIcon(props.content.icon);
+        });
         return {
             getIcon,
+            iconText,
         };
     },
     computed: {
         iconHTML() {
-            return this.getIcon(this.content.icon) || placeholderIcon;
+            return this.iconText || placeholderIcon;
         },
         style() {
             return {
