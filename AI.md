@@ -37,7 +37,7 @@ Events: none
 Variables: none
 
 *** IMPORTANT ***: The `color` property are in the `props` key of the element, not in the `styles` key.
-*** IMPORTANT ***: The size of the icon is managed using common width and height properties
+*** IMPORTANT ***: The size of the icon is managed using common `width` and `height` properties, `height` can be set to auto
 <example>
   Icon with different color and backgroundColor on hover:
   {"uid":"hover_icon","tag":"ww-icon","name":"Hover Icon","props":{"default":{"color":"red", ...},"_wwHover_default":{"color":"blue"},"_wwHover_mobile":{"color":"blue"}},"styles":{"default":{"backgroundColor":"yellow", ...},"_wwHover_default":{"backgroundColor":"green"}}}
