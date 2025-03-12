@@ -1,5 +1,11 @@
 <template>
-    <div v-html="iconHTML" :style="style" class="ww-icon"></div>
+    <component
+        :is="hasLink ? tag : 'div'"
+        v-html="iconHTML"
+        v-bind="properties"
+        :style="style"
+        class="ww-icon"
+    ></component>
 </template>
 
 <script>
@@ -16,6 +22,8 @@ export default {
     },
     setup(props) {
         const { getIcon } = wwLib.useIcons();
+        const { hasLink, tag, properties } = wwLib.wwElement.useLink();
+
         const iconText = ref(null);
         watchEffect(async () => {
             try {
@@ -24,9 +32,13 @@ export default {
                 iconText.value = null;
             }
         });
+
         return {
             getIcon,
             iconText,
+            hasLink,
+            tag,
+            properties,
         };
     },
     computed: {
