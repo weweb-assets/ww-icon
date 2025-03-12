@@ -5,6 +5,7 @@
         v-bind="properties"
         :style="style"
         class="ww-icon"
+        :class="{ '-link': hasLink }"
     ></component>
 </template>
 
@@ -63,6 +64,9 @@ export default {
     > :deep(svg) {
         width: 100%;
         height: 100%;
+    }
+    &.-link {
+        cursor: pointer;
     }
 }
 </style>
