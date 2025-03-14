@@ -17,6 +17,7 @@ export default {
             bindable: true,
             states: true,
             /* wwEditor:start */
+            hidden: (_content, _sidePanelContent, _boundProps, wwProps) => !!(wwProps && wwProps.icon),
             bindingValidation: {
                 type: 'string',
                 tooltip: 'A string that defines the icon code',
@@ -32,6 +33,7 @@ export default {
             options: {
                 nullable: true,
             },
+            hidden: (_content, _sidePanelContent, _boundProps, wwProps) => !!(wwProps && wwProps.color),
             /* wwEditor:start */
             bindingValidation: {
                 type: 'string',
