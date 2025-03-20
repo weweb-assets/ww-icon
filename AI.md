@@ -23,7 +23,7 @@ Properties:
 - color: string - Color of icon (name, hex, RGB/RGBA). (Mandatory)
 - icon: string - iconSet/name. Default: "phosphor-regular/heart" (Mandatory)
 
-Children: none
+Slots: none
 
 Features:
 - Linkable for URL redirection or action triggers
