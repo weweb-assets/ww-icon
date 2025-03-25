@@ -29,6 +29,7 @@ export default {
             bindable: true,
             states: true,
             classes: true,
+            responsive: true,
             options: {
                 nullable: true,
             },
