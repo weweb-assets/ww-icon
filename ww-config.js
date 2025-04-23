@@ -20,7 +20,12 @@ export default {
             hidden: (_content, _sidePanelContent, _boundProps, wwProps) => !!(wwProps && wwProps.icon),
             bindingValidation: {
                 type: 'string',
-                tooltip: 'A string that defines the icon code',
+                tooltip:
+                    'A string that defines the icon code.\n\nAlways use icons full names in binding.\n\n<b>Icons with partial or cut names will not be included in the published app.</b>\n\nEx:\n<code>if(cond, "lucide/my-icon", "lucide/other-icon")</code>\n\ninstead of\n<code>"lucide/" + if(cond, "my-icon", "other-icon")</code>',
+            },
+            propertyHelp: {
+                tooltip:
+                    'Always use icons full names in binding.\n\n<b>Icons with partial or cut names will not be included in the published app.</b>\n\nEx:\n<code>if(cond, "lucide/my-icon", "lucide/other-icon")</code>\n\ninstead of\n<code>"lucide/" + if(cond, "my-icon", "other-icon")</code>',
             },
             /* wwEditor:end */
         },
