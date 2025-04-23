@@ -1,43 +1,31 @@
 ---
 name: ww-icon
 description: Renders a customizable icon with adjustable color, and type, linkable to URL/action for interactive functionality.
-keywords:
-  - icon rendering
-  - customizable size
-  - customizable color
-  - icon type
-  - linkable icon
-  - responsive properties
-  - state bindings
-  - url redirection
-  - action trigger
-  - icon class name
+keywords: icon rendering, customizable size, customizable color, icon type, linkable icon, responsive properties, state bindings, url redirection, action trigger, icon class name
 ---
 
 #### ww-icon
 
-Component Purpose: Renders an icon element with customizable size, color, and icon type. Can be linked to URL or action.
+***Purpose:***
+Renders an icon element with customizable size, color, and icon type. Can be linked to URL or action.
 When put inside a ww-button, do not forget to ad the proper margin to the left or right.
 
-Properties:
-- color: string - Color of icon (name, hex, RGB/RGBA). (Mandatory)
-- icon: string - iconSet/name. Default: "phosphor-regular/heart" (Mandatory)
-
-Slots: none
-
-Features:
+***Features:***
 - Linkable for URL redirection or action triggers
-- Responsive fontSize and color values with states support
+- Responsive size and color values with states support
 - Icon property supports state bindings
 - When the icon is the child of a button, do not forget to add the proper margin
 - Icon property must match an available iconSet in the current project
 
-Events: none
+***Properties:***
+- color: string - Color of icon (name, hex, RGB/RGBA). (Mandatory)
+- icon: string - iconSet/name. Default: "phosphor-regular/heart" (Mandatory)
 
-Variables: none
-
+***Notes:***
+Use `width` and `height (default is auto)` in styles to set the size of the icon. fontSize is not available.
+If you use the phosphor-bold library, make sure that the icons names end with -bold (ex: phosphor-bold/plus-bold)
 *** IMPORTANT ***: The `color` property are in the `props` key of the element, not in the `styles` key.
-*** MANDATORY ***: Set icon width using common `width` and `height` properties, `height` can be set to auto. Not font-size, it's meaningless here.
+
 <example>
   Icon with different color and backgroundColor on hover:
   {"uid":"hover_icon","tag":"ww-icon","name":"Hover Icon","props":{"default":{"color":"red", ...},"_wwHover_default":{"color":"blue"},"_wwHover_mobile":{"color":"blue"}},"styles":{"default":{"backgroundColor":"yellow", "width":"24px", "height":"auto",...},"_wwHover_default":{"backgroundColor":"green"}}}
