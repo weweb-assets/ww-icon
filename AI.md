@@ -22,8 +22,9 @@ When put inside a ww-button, do not forget to ad the proper margin to the left o
 - icon: string - iconSet/name. Default: "phosphor-regular/heart" (Mandatory)
 
 ***Notes:***
-Use `width` and `height (default is auto)` in styles to set the size of the icon. fontSize is not available.
-If you use the phosphor-bold library, make sure that the icons names end with -bold (ex: phosphor-bold/plus-bold)
+- Use `width` and `height (default is auto)` in styles to set the size of the icon. fontSize is not available.
+- `width` is the size of the container of the icon, not the icon itself. You can then add paddings if needed but it will reduce the visual size of the icon.
+- If you use the phosphor-bold library, make sure that the icons names end with -bold (ex: phosphor-bold/plus-bold)
 *** IMPORTANT ***: The `color` property are in the `props` key of the element, not in the `styles` key.
 
 <example>
