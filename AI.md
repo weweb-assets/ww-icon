@@ -25,6 +25,7 @@ When put inside a ww-button, do not forget to ad the proper margin to the left o
 - Use `width` and `height (default is auto)` in styles to set the size of the icon. fontSize is not available.
 - `width` is the size of the container of the icon, not the icon itself. You can then add paddings if needed but it will reduce the visual size of the icon. Example: if `width` is 50px and padding is 10px (on all sides), the visual icon size will be 30px.
 - If you use the phosphor-bold library, make sure that the icons names end with -bold (ex: phosphor-bold/plus-bold)
+- If you use the phosphor-fill library, make sure that the icons names end with -fill (ex: phosphor-fill/plus-fill)
 *** IMPORTANT ***: The `color` property are in the `props` key of the element, not in the `styles` key.
 
 <example>
