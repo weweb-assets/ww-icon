@@ -75,6 +75,7 @@ export default {
     > :deep(svg) {
         width: 100%;
         height: 100%;
+        fill: currentColor;
     }
     &.-link {
         cursor: pointer;
