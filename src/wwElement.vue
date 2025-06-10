@@ -61,10 +61,7 @@ export default {
     },
     computed: {
         iconHTML() {
-            /* wwEditor:start */
             return this.iconText || this.placeholder;
-            /* wwEditor:end */
-            return this.iconText;
         },
         style() {
             return {
