@@ -9,6 +9,7 @@ export default {
     options: {
         displayAllowedValues: ['flex', 'inline-flex'],
         linkable: true,
+        icons: ['phosphor-fill/airplane-in-flight-fill', 'phosphor-fill/park-fill'],
     },
     properties: {
         icon: {
