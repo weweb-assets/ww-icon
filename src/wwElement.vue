@@ -1,12 +1,13 @@
 <template>
     <component
         :is="hasLink ? tag : 'div'"
-        v-html="iconHTML"
         v-bind="properties"
         :style="style"
         class="ww-icon"
         :class="{ '-link': hasLink }"
-    ></component>
+    >
+        <span class="ww-icon__content" v-html="iconHTML"></span>
+    </component>
 </template>
 
 <script>
@@ -79,12 +80,16 @@ export default {
 .ww-icon {
     color: var(--icon-color, unset);
     fill: currentColor;
-    > :deep(svg) {
+    :deep(svg) {
         width: 100%;
         height: 100%;
     }
     &.-link {
         cursor: pointer;
     }
+}
+
+.ww-icon__content {
+    display: contents;
 }
 </style>
